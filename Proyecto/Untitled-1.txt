@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 7</title>
+    <script type="text/javascript">
+        function permite(elEvento, permitidos, elemento, numCaracteres) {
+            // Variables que definen los caracteres permitidos
+            var numeros = "0123456789";
+            var caracteres = " abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
+            var numeros_caracteres = numeros + caracteres;
+            switch (permitidos) {
+                case 'num':
+                    permitidos = numeros;
+                    break;
+                case 'car':
+                    permitidos = caracteres;
+                    break;
+                case 'num_car':
+                    permitidos = numeros_caracteres;
+                    break;
+            }
+            // Obtener la tecla pulsada 
+            var evento = elEvento || window.event;
+            var codigoCaracter = evento.charCode || evento.keyCode;
+            var caracter = String.fromCharCode(codigoCaracter);
+            // Comprobar si la tecla pulsada se encuentra en los caracteres permitidos
+            // o si es una tecla especial
+            var permitido = permitidos.indexOf(caracter) != -1;
+            var longitud = elemento.value.length < numCaracteres;
+            return (permitidos.indexOf(caracter) != -1 && elemento.value.length < numCaracteres) ;
+        }
+    </script>
+</head>
+<body>

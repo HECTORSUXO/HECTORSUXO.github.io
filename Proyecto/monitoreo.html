@@ -1,0 +1,33 @@
+<head>
+    <script src="JS_PROYECTO.js"></script>
+    <link href= "CSS estilo/Proyecto.css" type="text/css"
+         rel="stylesheet" />
+  </head>
+<section id="monitoreo">
+    <h2>Monitoreando tu Progreso</h2>
+       <p id="saludoUsuario">¡Hola! Llena por favor los siguientes datos para conocer tu índice de Masa Corporal:</p>
+
+    <form id="formMonitoreo">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <br>
+        <label for="fechaInicio">Fecha de inicio del monitoreo (YYYY-MM-DD):</label>
+        <input type="text" id="fechaInicio" name="fechaInicio" required>
+        <br>
+        <label for="edad">¿Cuántos años tienes?</label>
+        <input type="text" id="edad" name="edad" required>
+        <br>
+        <label for="genero">¿Cuál es tu género? (varón, mujer, otro)</label>
+        <input type="text" id="genero" name="genero" required>
+        <br>
+        <label for="peso">¿Cuál es tu peso en kilogramos?</label>
+        <input type="text" id="peso" name="peso" required>
+        <br>
+        <label for="estatura">¿Cuál es tu estatura en centímetros?</label>
+        <input type="text" id="estatura" name="estatura" required>
+        <br>
+        <input type="button" value="Calcular IMC" onclick="calcularIMC()">
+    </form>
+
+   
+</section>
